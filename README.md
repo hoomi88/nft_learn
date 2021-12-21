@@ -30,7 +30,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Solution URL](https://github.com/hoomi88/nft_learn)
-- Live Site URL: [Live site URL](https://hoomi88.github.io)
+- Live Site URL: [Live site URL](https://hoomi88.github.io/nft_learn/)
 
 ## My process
 
