@@ -46,12 +46,42 @@
       
 
     }
-    .card-image {
+    .card-image {      
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    .card-hover {
+      position: relative;
       margin-left: 7%;
       margin-right: 7%;
       margin-top: 7%;
       width: 86%;
-      border-radius: 5px;
+      border-radius: 5px;      
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      border-radius: 5px;    
+      /*background-color: hsl(178, 100%, 50%);*/
+      display: flex;
+    }
+
+    .overlay:hover {     
+      background-color: hsla(178, 100%, 50%, 0.5);
+      background-image: url(./images/icon-view.svg);
+      background-repeat: no-repeat;
+      background-position:center;
+    }
+
+    .basic-link{
+      text-decoration: none;
     }
     .nft-name {
       margin-left: 7%;
@@ -59,6 +89,9 @@
       font-weight: 700;
       font-size: 18px;
       color: hsl(0, 0%, 100%);
+    }
+    .nft-name:hover{
+      color: hsl(178, 100%, 50%);
     }
     .nft-desc {
       margin-left: 7%;
@@ -94,8 +127,7 @@
     }
     .content{
       /*display:table-cell;*/
-      vertical-align:middle;
-      
+      vertical-align:middle;      
     }
     .credits-text{
       color:hsl(215, 51%, 70%);
@@ -105,8 +137,10 @@
     }
     .credits-name{
       color:hsl(0, 0%, 100%);
-      vertical-align:middle;
-      
+      vertical-align:middle;      
+    }
+    .credits-name:hover{
+      color: hsl(178, 100%, 50%);
     }
     .avatar{
       width: 32px;
@@ -124,10 +158,20 @@
 <body>
   <div class="area">
     <div class="card"> 
-      <img class="card-image" src="./images/image-equilibrium.jpg" alt="image-equilibrium">
-      <div class="nft-name">
-        Equilibrium #3429
-      </div>
+      <a href="#">
+        <div class="card-hover">
+          <img class="card-image" src="./images/image-equilibrium.jpg" alt="image-equilibrium">
+          <div class="overlay">
+            <!--<img class="eye-center" src="./images/icon-view.svg" alt="icon-view">-->
+          </div>
+        </div>
+      </a>
+
+      <a class="basic-link" href="#">
+        <div class="nft-name">          
+            Equilibrium #3429
+        </div>
+      </a>
       <div class="nft-desc">
         Our Equilibrium collection promotes balance and calm.
       </div>
@@ -148,7 +192,9 @@
             <img class="avatar" src="./images/image-avatar.png" alt="image-avatar">
           </span>  
           <span class="credits-text">Creation of </span>
-          <span class="credits-name">Jules Wyvern</span>
+          <a class="basic-link" href="#">
+            <span class="credits-name">Jules Wyvern</span>
+          </a>
         </div>
       </div>
     </div>
